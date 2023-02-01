@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Styles for the container */
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Styles for the individual images */
+      .gallery img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+      }
+
+      /* Styles for the captions */
+      .caption {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: gray;
+        margin-top: 5px;
+      }
+
+      /* Styles for the description */
+      .description {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: gray;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+      <div>
+        <img src="image.jpg" alt="Image 1">
+        <p class="caption">Image 1</p>
+        <p class="description">Description for Image 1</p>
+      </div>
+      <div>
+        <img src="image1.png" alt="Image 2">
+        <p class="caption">Image 2</p>
+        <p class="description">Description for Image 2</p>
+      </div>
+      <div>
+        <img src="image3.jpg" alt="Image 3">
+        <p class="caption">Image 3</p>
+        <p class="description">Description for Image 3</p>
+      </div>
+      <!-- Add more images as needed -->
+    </div>
+  </body>
+</html>
