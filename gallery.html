@@ -17,6 +17,7 @@
         margin: 10px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px gray;
+        transition: transform 0.5s ease;
       }
 
       /* Styles for the captions */
@@ -35,6 +36,22 @@
         font-size: 12px;
         color: gray;
         margin-top: 5px;
+      }
+
+      /* Styles for different sized images */
+      .large {
+        width: 600px;
+        height: 400px;
+      }
+      .small {
+        width: 150px;
+        height: 100px;
+      }
+
+      /* Styles for when the mouse is over the image */
+      .gallery img:hover {
+        transform: scale(2);
+        cursor: pointer;
       }
     </style>
   </head>
