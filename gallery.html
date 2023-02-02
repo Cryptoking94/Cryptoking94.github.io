@@ -3,6 +3,21 @@
   <head>
     <style>
       /* Styles for the container */
+            body {
+        background-color: white;
+        margin: 0;
+            }
+      header {
+        background-color: pink;
+        color: white;
+        padding: 15px;
+        text-align: left;
+      }
+      a {
+        color: black;
+        text-decoration: blink;
+        margin-right: 20px;
+      }
       .gallery {
         display: flex;
         flex-wrap: wrap;
@@ -53,22 +68,43 @@
         transform: scale(2);
         cursor: pointer;
       }
+      h1 {
+    transition: font-size 0.3s ease;
+    }
+
+    h1:hover {
+    font-size: 40px;
+    color: black;
+    }
+    p {
+    font-size: 14px;
+    transition: font-size 0.9s ease;
+    }
+
+    p:hover {
+    color: black;
+    font-size: 25px;
+    }
     </style>
   </head>
   <body>
+      <header>
     <h1>Photo Gallery</h1>
+          <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+    </header>
     <div class="gallery">
       <div>
         <img src="image.jpg" alt="Image 1">
-         <p class="description">Description for Image 1</p>
+         <p class="description">"Baby boss in the chair."</p>
       </div>
       <div>
         <img src="image1.png" alt="Image 2">
-        <p class="description">Description for Image 2</p>
+        <p class="description">"Tiny tyrant, big personality."</p>
       </div>
       <div>
         <img src="i.jpg" alt="Image 3">
-        <p class="description">Description for Image 3</p>
+        <p class="description">"Baby grins and sunshine."</p>
       </div>
       <!-- Add more images as needed -->
     </div>
