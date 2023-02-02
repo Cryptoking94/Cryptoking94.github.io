@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .gallery img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+        transition: transform 0.5s ease;
+      }
+
+      .caption {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: gray;
+        margin-top: 5px;
+      }
+
+      .description {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: gray;
+        margin-top: 5px;
+      }
+
+      .large {
+        width: 600px;
+        height: 400px;
+      }
+      .small {
+        width: 150px;
+        height: 100px;
+      }
+
+      .gallery img:hover {
+        transform: scale(2);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Photo Gallery</h1>
+    </header>
+    <div class="gallery">
+    </div>
+    <script>
+      // Get the folder containing the images
+      const folder = "./images/";
+
+      // Get the container for the images
+      const gallery = document.querySelector(".gallery");
+
+      // Get the array of images in the folder
+      fetch(folder)
+        .then(res => res.text())
+        .then(content => {
+          // Extract the list of images from the folder
+          const images = content.match(/href="[^"]+\.(jpe?g|png|gif)/g);
+
+          // Create a div for each image
+          images.forEach(image => {
+            const div = document.createElement("div");
+            const img = document.createElement("img");
+            img.src = folder + image.slice(6);
+            div.appendChild(img);
+            gallery.appendChild(div);
+          });
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>
